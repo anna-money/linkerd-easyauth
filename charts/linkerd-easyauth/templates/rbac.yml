@@ -1,7 +1,7 @@
 {{- $host := printf "easyauth-injector.%s.svc" .Values.namespace }}
 {{- $cert := "" }}
 {{- if (lookup "v1" "Secret" .Release.Namespace "easyauth-injector-k8s-tls") }}
-{{- $cert = (lookup "v1" "Secret" .Release.Namespace "easyauth-injector-k8s-tls").data.`tls.crt` }}
+{{- $cert = (lookup "v1" "Secret" .Release.Namespace "easyauth-injector-k8s-tls").data.tls.crt }}
 {{- else }}
 {{- $ca := genSelfSignedCert $host (list) (list $host) 365 }}
 ---
