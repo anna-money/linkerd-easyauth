@@ -21,7 +21,7 @@ New `AuthorizationPolicy` is supported since `0.6.0`. New `HTTPRoute` is support
 
 ## CLI
 
-Grab latest binaries from the releases page: https://github.com/aatarasoff/linkerd-easyauth/releases.
+Grab latest binaries from the releases page: https://github.com/anna-money/linkerd-easyauth/releases.
 
 ### Usage
 
@@ -44,7 +44,7 @@ Install the helm chart with injector and policies:
 
 # Edit namespace and add standard linkerd annotations
 
-> helm repo add linkerd-easyauth https://aatarasoff.github.io/linkerd-easyauth
+> helm repo add linkerd-easyauth https://anna-money.github.io/linkerd-easyauth
 > helm install -n linkerd-easyauth linkerd-easyauth linkerd-easyauth/linkerd-easyauth --values your_values.yml
 ```
 

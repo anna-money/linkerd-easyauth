@@ -8,7 +8,7 @@ tolerations: &default_tolerations
 
 webhook:
   image:
-    name: aatarasoff/linkerd-easyauth-webhook
+    name: europe-docker.pkg.dev/anna-infra/linkerd-easyauth/linkerd-easyauth-webhook
     version: 0.9.0
     pullPolicy: IfNotPresent
 
