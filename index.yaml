@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  linkerd-easyauth:
+  - apiVersion: v1
+    appVersion: 0.13.2
+    created: "2024-11-11T19:30:36.984474264Z"
+    description: A Helm chart for Linkerd easyauth extension
+    digest: 65ee79290b81695176fe00a11b1ccddc1008f25a25430b452d22b21f4a2a26db
+    name: linkerd-easyauth
+    urls:
+    - https://github.com/anna-money/linkerd-easyauth/releases/download/linkerd-easyauth-0.13.2/linkerd-easyauth-0.13.2.tgz
+    version: 0.13.2
+generated: "2024-11-11T19:30:36.984485525Z"
