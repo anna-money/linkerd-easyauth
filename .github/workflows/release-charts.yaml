@@ -22,7 +22,7 @@ jobs:
           git config user.email "${{ secrets.GIT_EMAIL }}"
 
       - name: Install Helm
-        uses: azure/setup-helm@v3
+        uses: azure/setup-helm@v4
         with:
           version: v3.8.1
 
