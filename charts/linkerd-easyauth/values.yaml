@@ -9,7 +9,7 @@ tolerations: &default_tolerations
 webhook:
   image:
     name: europe-docker.pkg.dev/anna-infra/linkerd-easyauth/linkerd-easyauth-webhook
-    version: 0.9.0
+    version: 0.13.1
     pullPolicy: IfNotPresent
 
   # modify to HA mode
@@ -26,7 +26,7 @@ webhook:
   tolerations: *default_tolerations
 
 policies:
-  # linkerd sys namespaces should has access to proxy admin port
+  # linkerd sys namespaces should have access to proxy admin port
   linkerd:
     namespaces:
       - linkerd
@@ -41,7 +41,7 @@ policies:
     enabled: false
     namespace: ingress
 
-  # policy for monitoring (eg. external prometheus)
+  # policy for monitoring (e.g. external prometheus)
   monitoring:
     enabled: false
     namespace: monitoring
