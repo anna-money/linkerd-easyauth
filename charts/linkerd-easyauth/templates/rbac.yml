@@ -1,5 +1,8 @@
 {{- $host := printf "easyauth-injector.%s.svc" .Values.namespace }}
-{{- if not (lookup "v1" "Secret" .Release.Namespace "easyauth-injector-k8s-tls") }}
+{{- $cert := "" }}
+{{- if (lookup "v1" "Secret" .Release.Namespace "easyauth-injector-k8s-tls") }}
+{{- $cert = (lookup "v1" "Secret" .Release.Namespace "easyauth-injector-k8s-tls").data.`tls.crt` }}
+{{- else }}
 {{- $ca := genSelfSignedCert $host (list) (list $host) 365 }}
 ---
 kind: Secret
@@ -11,6 +14,7 @@ type: kubernetes.io/tls
 data:
   tls.crt: {{ (b64enc (trim $ca.Cert)) }}
   tls.key: {{ (b64enc (trim $ca.Key)) }}
+{{- $cert = b64enc (trim $ca.Cert) }}
 {{- end }}
 ---
 kind: ClusterRole
@@ -67,7 +71,7 @@ webhooks:
         name: easyauth-injector
         namespace: {{ .Values.namespace }}
         path: "/"
-      caBundle: {{ (b64enc (trim $ca.Cert)) }}
+      caBundle: {{ $cert }}
     failurePolicy: {{.Values.webhook.failurePolicy}}
     admissionReviewVersions: ["v1", "v1beta1"]
     reinvocationPolicy: IfNeeded
