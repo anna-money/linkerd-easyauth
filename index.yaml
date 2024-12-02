@@ -37,4 +37,13 @@ entries:
     urls:
     - https://github.com/anna-money/linkerd-easyauth/releases/download/linkerd-easyauth-0.13.2/linkerd-easyauth-0.13.2.tgz
     version: 0.13.2
-generated: "2024-11-11T19:51:38.690534416Z"
+  - apiVersion: v1
+    appVersion: 0.13.5
+    created: "2024-12-02T10:37:18.70515114Z"
+    description: A Helm chart for Linkerd easyauth extension
+    digest: 4bcf2fa2e35fe389df6f96926f2e15872cce1958ea2eb662552c94960f914d60
+    name: linkerd-easyauth
+    urls:
+    - https://github.com/anna-money/linkerd-easyauth/releases/download/linkerd-easyauth-0.2.0/linkerd-easyauth-0.2.0.tgz
+    version: 0.2.0
+generated: "2024-12-02T10:37:18.705165788Z"
