@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "0.13.5"
 description: A Helm chart for Linkerd easyauth extension
 name: linkerd-easyauth
-version: "0.13.5"
+version: "0.2.0"
